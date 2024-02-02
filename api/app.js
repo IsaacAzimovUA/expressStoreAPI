@@ -1,4 +1,5 @@
 require('dotenv').config();
+require('express-async-errors');
 
 const express = require('express');
 const app = express();
@@ -27,7 +28,7 @@ const start = async () => {
     //connect to DB
     app.listen(port, console.log(`Server listen on port ${port}...`));
   } catch (error) {
-    throw new Error(error);
+    console.log(error);
   }
 };
 start();

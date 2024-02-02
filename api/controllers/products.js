@@ -1,4 +1,5 @@
 const getAllProductStatic = async (req, res) => {
+  throw new Error('Hello');
   res.status(200).json({
     msg: 'product testing route',
   });
