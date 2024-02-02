@@ -1,4 +1,5 @@
 require('dotenv').config();
+const connectDB = require('./db/connect');
 
 const express = require('express');
 const app = express();
@@ -20,6 +21,7 @@ const port = process.env.PORT || 3000;
 
 const start = async () => {
   try {
+    await connectDB(process.env.DB_URI);
     //connect to DB
     app.listen(port, console.log(`Server listen on port ${port}...`));
   } catch (error) {
