@@ -9,7 +9,7 @@ services:
     environment:
       DB_URI: mongodb://db/store
   db:
-    image: mongodb/mongodb-community-server:6.0-ubi8
+    image: mongo
     ports:
       - 27017:27017
     volumes:
